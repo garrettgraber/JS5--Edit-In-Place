@@ -1,18 +1,25 @@
 
 
-var visibilityToggle = function(elem) {
-	var divId = $(elem).attr("id");
-	var idTotal = "#" + divId;
-	
-	var textBox = $(idTotal + ' text');
-	textBox.removeClass('editable-text');
-	textBox.addClass('box-zero');
-	textBox.hide();
-	var inputBox = $(idTotal + ' textarea');
-	inputBox.removeClass('box-zero');
-	inputBox.addClass('editable-text');
-}
 
-window.visibilityToggle = visibilityToggle;
+$('.editable-text').on('click', function() {
+	var editableElement = $(this);
+	var parentElement = editableElement.parent();
+	var hiddenElement = parentElement.find('.box-zero');
 
-//$('.box-zero').on('click', )
+	console.log('Visible name: ' + editableElement.attr('class'));
+	console.log('Hidden Element: ' + hiddenElement.attr('class'));
+	console.log('Parent Element: ' + parentElement.attr('id'));
+
+
+	editableElement.removeClass('editable-text');
+	editableElement.addClass('box-zero');
+	editableElement.hide();
+	hiddenElement.removeClass('box-zero');
+	hiddenElement.addClass('editable-text');
+
+	var editableValue = editableElement.text();
+	hiddenElement.html(editableValue); 
+	});
+
+
+

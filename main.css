@@ -1,0 +1,38 @@
+
+.basic-box {
+	height: 200px;
+	width: 300px;
+	display: inline-block;
+	border-radius: 2px;
+	border-color: red;
+	border-style: solid;
+	padding: 5px;
+}
+
+.box-zero {
+	height: 0px;
+	width: 0px;
+	border: 0;
+	padding: 0;
+	visibility: hidden;
+}
+
+.editable-text {
+	height: 200px;
+	width: 300px;
+	background-color: green;
+	display: inline-block;
+	border-radius: 5px;
+	border-color: red;
+	border-style: solid;
+	padding: 10px;
+	visibility: visible;
+}
+
+.inputed-text {
+	visibility: hidden;
+}
+
+h1 {
+	display: inline-block;
+}
